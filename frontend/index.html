@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- TOP SUMMARY -->
+    <div class="summary-card">
+      <h1>Expense Tracker</h1>
+      <button id="theme-toggle">🌙</button>
+
+      <div class="totals">
+        <div>
+          <p>Total Spent</p>
+          <h2 id="total-expense">₹0</h2>
+        </div>
+
+        <div>
+          <p>Today Spent</p>
+          <h3 id="today-expense">₹0</h3>
+        </div>
+
+        <div>
+          <p>This Month</p>
+          <h3 id="month-expense">₹0</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK STATS -->
+    <div class="quick-stats">
+
+      <!-- CATEGORY BARS -->
+      <div class="category-summary">
+        <h3>Spending by Category</h3>
+        <div id="category-bars"></div>
+      </div>
+
+      <!-- PIE CHART -->
+      <div class="chart-card">
+        <h3>Expense Distribution</h3>
+        <canvas id="expenseChart"></canvas>
+      </div>
+
+      <!-- ADD EXPENSE -->
+      <div class="add-expense-card">
+        <h2>Add Expense</h2>
+
+        <form id="expense-form">
+          <input type="text" id="title" placeholder="Expense title" required />
+          <input type="number" id="amount" placeholder="Amount" required />
+
+          <select id="category" required>
+            <option value="">Select category</option>
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Entertainment</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Other</option>
+          </select>
+
+          <button type="submit">Add Expense</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- EXPENSE LIST -->
+    <div class="dashboard">
+      <div class="expenses-panel">
+        <select id="date-filter">
+          <option value="all">All</option>
+          <option value="today">Today</option>
+          <option value="month">This Month</option>
+        </select>
+
+        <ul id="expense-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
