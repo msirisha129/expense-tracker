@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/expenses";
+const API_URL = "https://expense-tracker-dyp6.onrender.com/api/expenses";
 
 const form = document.getElementById("expense-form");
 const titleInput = document.getElementById("title");
