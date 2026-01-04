@@ -1,40 +1,89 @@
-# Expense Tracker Web Application 💰
+📊 Expense Tracker Web Application
+A full-stack Expense Tracker web application built using Node.js, Express, MongoDB, HTML, CSS, and JavaScript.
+This application helps users track daily expenses, visualize spending patterns, and manage finances efficiently.
 
-A full-stack Expense Tracker that helps users track expenses, visualize spending patterns, and receive intelligent spending alerts.
+🚀 Features
+➕ Add daily expenses with category and amount
+📋 View all expenses in a scrollable list
+🧮 Calculate:
+Total Spent
+Today’s Spending
+Monthly Spending
+📊 Visual representation of expenses using:
+Category-wise progress bars
+Pie chart (Chart.js)
+🌙 Dark Mode UI for better accessibility
+📱 Fully responsive (desktop & mobile friendly)
+⚠️ AI-based spending alerts (basic logic implemented)
+🛠️ Tech Stack
 
-## 🚀 Features
-- Add, view, and manage daily expenses
-- Category-wise spending analysis
-- Interactive pie charts using Chart.js
-- AI-based spending alerts
-- Dark mode support
-- Fully responsive design
+Frontend
+HTML5
+CSS3 (Dark Mode + Responsive Design)
+JavaScript (Vanilla JS)
 
-## 🛠️ Tech Stack
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Charts: Chart.js
+Backend
+Node.js (server-side runtime)
+Express.js (REST API framework)
 
-## 📊 AI Spending Alerts
-- Detects overspending beyond threshold
-- Alerts when a single category dominates expenses
-- Identifies unusual daily spending spikes
+Database
+MongoDB (NoSQL database)
+Mongoose (ODM)
 
-## 📱 Responsive Design
-- Optimized for mobile, tablet, and desktop devices
+Charts & Visualization
+Chart.js
 
-## ⚙️ How to Run Locally
-1. Clone the repository
-2. Install dependencies using `npm install`
-3. Start backend server using `npm start`
-4. Open `index.html` in browser
+🗂️ Project Structure
+EXPENSETRACKER/
+│
+├── backend/
+│   ├── controllers/
+│   │   └── expenseController.js
+│   ├── models/
+│   │   └── Expense.js
+│   ├── routes/
+│   │   └── expenseRoutes.js
+│   ├── server.js
+│   ├── .env
+│   ├── package.json
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── README.md
+⚙️ How It Works
+The Node.js server runs using Express and handles all API requests.
+Expenses are stored in MongoDB.
+Frontend fetches data from backend APIs using fetch().
+Chart.js dynamically updates charts based on expense data.
 
-## 📌 Future Enhancements
-- User authentication
-- Monthly budget planning
-- Download expense reports
+▶️ How to Run the Project
 
----
+1️⃣ Backend Setup
+cd backend
+npm install
+node server.js
 
-✨ Built with ❤️ by Sirisha
+2️⃣ Frontend Setup
+Open frontend/index.html using Live Server
+OR directly open in browser
+
+📌 API Endpoints
+Method	Endpoint	Description
+GET	/api/expenses	Fetch all expenses
+POST	/api/expenses	Add a new expense
+DELETE	/api/expenses/:id	Delete an expense
+
+
+✨ Future Enhancements
+User authentication
+Export expenses to CSV/PDF
+Advanced AI spending predictions
+Cloud deployment (Render / Vercel)
+
+👩‍💻 Author
+ M Shirisha
+IT Student | Full Stack Web Development
+GitHub: https://github.com/msirisha129
