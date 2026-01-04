@@ -1,46 +1,81 @@
-# 💰 Expense Tracker – Full Stack Web Application
+#  Expense Tracker – Full Stack Web Application
 
 A **full-stack Expense Tracker web application** built using **Node.js, Express, MongoDB, HTML, CSS, and JavaScript**.  
 This application helps users **track daily expenses**, **visualize spending patterns**, and **manage finances efficiently**.
 
 ---
+## Live Demo
 
-## 🚀 Features
+### Frontend (Live):
+👉 https://expense-tracker-dyp6.onrender.com
 
-- ➕ Add daily expenses with category and amount  
-- 📋 View all expenses in a scrollable list  
-- 📊 Calculate:
-  - Total Spent  
-  - Today’s Spending  
-  - Monthly Spending  
-- 📈 Visual representation of expenses:
-  - Category-wise progress bars  
-  - Pie chart using Chart.js  
-- 🌙 Dark Mode UI for better accessibility  
-- 📱 Fully responsive (desktop & mobile friendly)  
-- ⚠️ AI-based spending alerts *(basic logic implemented)*  
+### Backend API (Live):
+👉 https://expense-tracker-dyp6.onrender.com/api/expenses
+
+
+##  Features
+
+- Add daily expenses with title, amount, category, and date
+
+- View all expenses stored in the database
+
+- RESTful API for expense operations
+
+- MongoDB Atlas cloud database integration
+
+- Backend deployed on Render
+
+- Fully responsive frontend 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
-- HTML5  
-- CSS3 (Dark Mode + Responsive Design)  
-- JavaScript (Vanilla JS)
+- HTML,CSS,JavaScript
 
 ### Backend
-- Node.js (server-side runtime)  
-- Express.js (REST API framework)
+- Node.js  
+- Express.js
 
 ### Database
-- MongoDB (NoSQL database)  
-- Mongoose (ODM)
+- MongoDB Atlas(Cloud Database)
 
 ### Charts & Visualization
 - Chart.js
-
+### Deployment
+- Render(Backend + Frontend)
 ---
+### API Endpoints 
+| Method | Endpoint            | Description        |
+| ------ | ------------------- | ------------------ |
+| GET    | `/api/expenses`     | Fetch all expenses |
+| POST   | `/api/expenses`     | Add a new expense  |
+| DELETE | `/api/expenses/:id` | Delete an expense  |
+
+## How to Run Locally
+### Backend setup 
+- cd backend 
+- npm install
+- Create the .env file inside the backend folder .
+- MONGO_URI=your_mongodb_atlas_connection_string
+  PORT=5000
+- start the backend server :
+- node server.is
+- Backend will run at: http://localhost:5000
+
+### Frontend Setup
+- cd frontend
+- open index.html using live server or in browser
+### Environment Note 
+- Update API base URL in frontend/script.js:
+- const API_URL = "http://localhost:5000/api/expenses";
+- For Production, this points to the deployed backend URL.
+### Local API Test
+- GET http://localhost:5000/api/expenses
+### Security Note
+- .env file is ignored using .gitignore
+- Database credentials are not exposed
 
 ## 📂 Project Structure
 EXPENSETRACKER/
@@ -85,5 +120,6 @@ EXPENSETRACKER/
 ## 👩‍💻 Author
 
 **M Shirisha**  
-Full Stack Web Development  
+ IT Student|Full Stack Web Development  
+ GitHub: https://github.com/msirisha129
 
