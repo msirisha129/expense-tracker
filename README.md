@@ -1,40 +1,89 @@
-# Expense Tracker Web Application 💰
+# 💰 Expense Tracker – Full Stack Web Application
 
-A full-stack Expense Tracker that helps users track expenses, visualize spending patterns, and receive intelligent spending alerts.
-
-## 🚀 Features
-- Add, view, and manage daily expenses
-- Category-wise spending analysis
-- Interactive pie charts using Chart.js
-- AI-based spending alerts
-- Dark mode support
-- Fully responsive design
-
-## 🛠️ Tech Stack
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Charts: Chart.js
-
-## 📊 AI Spending Alerts
-- Detects overspending beyond threshold
-- Alerts when a single category dominates expenses
-- Identifies unusual daily spending spikes
-
-## 📱 Responsive Design
-- Optimized for mobile, tablet, and desktop devices
-
-## ⚙️ How to Run Locally
-1. Clone the repository
-2. Install dependencies using `npm install`
-3. Start backend server using `npm start`
-4. Open `index.html` in browser
-
-## 📌 Future Enhancements
-- User authentication
-- Monthly budget planning
-- Download expense reports
+A **full-stack Expense Tracker web application** built using **Node.js, Express, MongoDB, HTML, CSS, and JavaScript**.  
+This application helps users **track daily expenses**, **visualize spending patterns**, and **manage finances efficiently**.
 
 ---
 
-✨ Built with ❤️ by Sirisha
+## 🚀 Features
+
+- ➕ Add daily expenses with category and amount  
+- 📋 View all expenses in a scrollable list  
+- 📊 Calculate:
+  - Total Spent  
+  - Today’s Spending  
+  - Monthly Spending  
+- 📈 Visual representation of expenses:
+  - Category-wise progress bars  
+  - Pie chart using Chart.js  
+- 🌙 Dark Mode UI for better accessibility  
+- 📱 Fully responsive (desktop & mobile friendly)  
+- ⚠️ AI-based spending alerts *(basic logic implemented)*  
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML5  
+- CSS3 (Dark Mode + Responsive Design)  
+- JavaScript (Vanilla JS)
+
+### Backend
+- Node.js (server-side runtime)  
+- Express.js (REST API framework)
+
+### Database
+- MongoDB (NoSQL database)  
+- Mongoose (ODM)
+
+### Charts & Visualization
+- Chart.js
+
+---
+
+## 📂 Project Structure
+EXPENSETRACKER/
+│
+├── backend/
+│ ├── controllers/
+│ │ └── expenseController.js
+│ ├── models/
+│ │ └── Expense.js
+│ ├── routes/
+│ │ └── expenseRoutes.js
+│ ├── server.js
+│ ├── .env
+│ └── package.json
+│
+├── frontend/
+│ ├── index.html
+│ ├── style.css
+│ └── script.js
+│
+└── README.md
+
+---
+
+## ⚙️ How It Works
+
+- The **Node.js server** runs using **Express** and handles all API requests.
+- Expenses are stored in **MongoDB**.
+- The frontend fetches data from backend APIs using `fetch()`.
+- **Chart.js** dynamically updates charts based on expense data.
+
+---
+
+## 📌 Future Improvements
+
+- User authentication  
+- Advanced AI spending predictions  
+- Export expenses (CSV / PDF)  
+
+---
+
+## 👩‍💻 Author
+
+**M Shirisha**  
+Full Stack Web Development  
+
