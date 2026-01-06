@@ -7,13 +7,9 @@ import {
 
 const router = express.Router();
 
-// GET all expenses
 router.get("/", getAllExpenses);
-
-// CREATE new expense
 router.post("/", createExpense);
-
-// DELETE expense by id
 router.delete("/:id", deleteExpense);
 
 export default router;
+

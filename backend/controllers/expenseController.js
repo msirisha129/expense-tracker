@@ -84,3 +84,9 @@ export const deleteExpense = async (req, res) => {
     });
   }
 };
+export {
+  createExpense,
+  getAllExpenses,
+  deleteExpense,
+};
+
