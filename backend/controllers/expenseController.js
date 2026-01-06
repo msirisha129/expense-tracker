@@ -1,11 +1,6 @@
-import Expense from "../models/Expense.js";
+const Expense = require("../models/Expense");
 
-/**
- * @desc    Create a new expense
- * @route   POST /api/expenses
- * @access  Public
- */
-export const createExpense = async (req, res) => {
+const createExpense = async (req, res) => {
   try {
     const { title, amount, category, date } = req.body;
 
@@ -35,11 +30,7 @@ export const createExpense = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get all expenses
- * @route   GET /api/expenses
- */
-export const getAllExpenses = async (req, res) => {
+const getAllExpenses = async (req, res) => {
   try {
     const expenses = await Expense.find().sort({ createdAt: -1 });
 
@@ -56,11 +47,7 @@ export const getAllExpenses = async (req, res) => {
   }
 };
 
-/**
- * @desc    Delete an expense
- * @route   DELETE /api/expenses/:id
- */
-export const deleteExpense = async (req, res) => {
+const deleteExpense = async (req, res) => {
   try {
     const expense = await Expense.findById(req.params.id);
 
@@ -84,9 +71,9 @@ export const deleteExpense = async (req, res) => {
     });
   }
 };
-export {
+
+module.exports = {
   createExpense,
   getAllExpenses,
   deleteExpense,
 };
-
