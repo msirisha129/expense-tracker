@@ -1,32 +1,31 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
+import express from "express";
+import cors from "cors";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import expenseRoutes from "./routes/expenseRoutes.js";
+
+dotenv.config();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/expenseTracker")
-  .then(() => console.log("DB Connected"));
+// ✅ API ROUTE
+app.use("/api/expenses", expenseRoutes);
 
-const TransactionSchema = new mongoose.Schema({
-  title: String,
-  amount: Number,
-  type: String,
-});
-
-const Transaction = mongoose.model("Transaction", TransactionSchema);
-
+// ✅ Test route
 app.get("/", (req, res) => {
-  res.send("Expense Tracker Backend Running");
+  res.send("Expense Tracker Backend Running 🚀");
 });
 
-app.post("/transaction", async (req, res) => {
-  await Transaction.create(req.body);
-  const data = await Transaction.find();
-  res.json(data);
-});
+// ✅ MongoDB Atlas (NOT localhost)
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.error(err));
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+// ✅ Render-safe port
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
