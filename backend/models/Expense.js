@@ -26,19 +26,16 @@ const expenseSchema = new mongoose.Schema(
       type: String,
       required: [true, "Category is required"],
       trim: true,
-      enum: {
-        values: [
-          "Food",
-          "Transport",
-          "Shopping",
-          "Bills",
-          "Entertainment",
-          "Health",
-          "Education",
-          "Other",
-        ],
-        message: "Invalid category",
-      },
+      enum: [
+        "Food",
+        "Transport",
+        "Shopping",
+        "Bills",
+        "Entertainment",
+        "Health",
+        "Education",
+        "Other",
+      ],
     },
 
     date: {
@@ -47,8 +44,8 @@ const expenseSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, // adds createdAt & updatedAt
-    versionKey: false, // removes __v (cleaner API)
+    timestamps: true,
+    versionKey: false,
   }
 );
 
