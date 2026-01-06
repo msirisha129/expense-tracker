@@ -1,9 +1,9 @@
-const express = require("express");
-const {
+import express from "express";
+import {
   createExpense,
   getAllExpenses,
   deleteExpense,
-} = require("../controllers/expenseController");
+} from "../controllers/expenseController.js";
 
 const router = express.Router();
 
@@ -21,4 +21,4 @@ router.post("/", createExpense);
 // DELETE expense by id
 router.delete("/:id", deleteExpense);
 
-module.exports = router;
+export default router;
