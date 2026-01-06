@@ -7,11 +7,6 @@ import {
 
 const router = express.Router();
 
-/**
- * @route   /api/expenses
- * @desc    Expense routes
- */
-
 // GET all expenses
 router.get("/", getAllExpenses);
 

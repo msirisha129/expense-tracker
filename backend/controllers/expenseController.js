@@ -1,15 +1,14 @@
-const Expense = require("../models/Expense");
+import Expense from "../models/Expense.js";
 
 /**
  * @desc    Create a new expense
  * @route   POST /api/expenses
- * @access  Public (can be private later)
+ * @access  Public
  */
-const createExpense = async (req, res) => {
+export const createExpense = async (req, res) => {
   try {
     const { title, amount, category, date } = req.body;
 
-    // basic safety check (extra layer)
     if (!title || amount === undefined || !category) {
       return res.status(400).json({
         success: false,
@@ -39,9 +38,8 @@ const createExpense = async (req, res) => {
 /**
  * @desc    Get all expenses
  * @route   GET /api/expenses
- * @access  Public
  */
-const getAllExpenses = async (req, res) => {
+export const getAllExpenses = async (req, res) => {
   try {
     const expenses = await Expense.find().sort({ createdAt: -1 });
 
@@ -61,9 +59,8 @@ const getAllExpenses = async (req, res) => {
 /**
  * @desc    Delete an expense
  * @route   DELETE /api/expenses/:id
- * @access  Public
  */
-const deleteExpense = async (req, res) => {
+export const deleteExpense = async (req, res) => {
   try {
     const expense = await Expense.findById(req.params.id);
 
@@ -86,10 +83,4 @@ const deleteExpense = async (req, res) => {
       message: error.message,
     });
   }
-};
-
-module.exports = {
-  createExpense,
-  getAllExpenses,
-  deleteExpense,
 };
