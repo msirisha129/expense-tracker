@@ -1,5 +1,8 @@
 const Expense = require("../models/Expense");
 
+/**
+ * Create Expense
+ */
 const createExpense = async (req, res) => {
   try {
     const { title, amount, category, date } = req.body;
@@ -18,57 +21,38 @@ const createExpense = async (req, res) => {
       date,
     });
 
-    res.status(201).json({
-      success: true,
-      data: expense,
-    });
+    res.status(201).json({ success: true, data: expense });
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
+/**
+ * Get All Expenses
+ */
 const getAllExpenses = async (req, res) => {
   try {
     const expenses = await Expense.find().sort({ createdAt: -1 });
-
-    res.status(200).json({
-      success: true,
-      count: expenses.length,
-      data: expenses,
-    });
+    res.status(200).json({ success: true, data: expenses });
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
+/**
+ * Delete Expense
+ */
 const deleteExpense = async (req, res) => {
   try {
     const expense = await Expense.findById(req.params.id);
-
     if (!expense) {
-      return res.status(404).json({
-        success: false,
-        message: "Expense not found",
-      });
+      return res.status(404).json({ success: false, message: "Expense not found" });
     }
 
     await expense.deleteOne();
-
-    res.status(200).json({
-      success: true,
-      message: "Expense deleted successfully",
-    });
+    res.status(200).json({ success: true, message: "Deleted successfully" });
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
