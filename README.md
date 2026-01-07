@@ -6,11 +6,10 @@ This application helps users **track daily expenses**, **visualize spending patt
 ---
 ## Live Demo
 
-### Frontend (Live):
-👉 https://expense-tracker-dyp6.onrender.com
+## 🚀 Live Demo
 
-### Backend API (Live):
-👉 https://expense-tracker-dyp6.onrender.com/api/expenses
+🔗 Frontend: https://expense-tracker-uczi.vercel.app  
+🔗 Backend API: https://expense-tracker-backend-8cyo.onrender.com
 
 
 ##  Features
