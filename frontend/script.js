@@ -1,4 +1,4 @@
-const API_URL = "https://expense-tracker-backend-8cy0.onrender.com/api/expenses";
+const API_URL = "https://expense-tracker-backend-8cyo.onrender.com/api/expenses";
 
 const form = document.getElementById("expense-form");
 const titleInput = document.getElementById("title");
