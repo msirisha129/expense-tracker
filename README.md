@@ -4,7 +4,7 @@ A **full-stack Expense Tracker web application** built using **Node.js, Express,
 This application helps users **track daily expenses**, **visualize spending patterns**, and **manage finances efficiently**.
 
 ---
-## Live Demo
+
 
 ## 🚀 Live Demo
 
